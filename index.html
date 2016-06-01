@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="author" content="Edmond L."/>
+<meta name="description" content="MySQL and SQLite admin manager, small, fast, and easy to use; builded with php"/>
+<meta name="keywords" content="edmyadmin,edliteadmin,edmondsql,phpmyadmin,phpliteadmin,sqlitemanager,mysqlmanager,sqladmin,sqliteadmin,mysql,sqlite,admin,php,sql"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<title>EdmondSQL</title>
+<link rel="stylesheet" href="styles.css" type="text/css"/>
+<script type="text/javascript">
+window.onload=function(){get(hash())}
+window.onhashchange=function(){get(hash())}
+function hash(h){
+var hash=location.hash.replace(/^#/, '');
+if(hash=='') hash="home";
+return hash;
+}
+function get(q){
+var el=["home","edmyadmin","edliteadmin"];
+if(el.indexOf(q) == -1) q="home";
+for(var i=0;i<el.length;i++){
+document.getElementById(el[i]).style.display="none";
+}
+req=window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
+req.onreadystatechange = function(){
+if(req.readyState == 4){
+if(req.status == 200){
+document.getElementById(q).style.display="block";
+}
+}
+}
+req.open('get','#'+q);
+req.send(null);
+}
+</script>
+</head>
+<body>
+<div class="header">
+	<h1>EdmondSQL</h1>
+</div>
+
+<div class="menu">
+<div class="link">
+	<a href="#home">Home</a><a href="#edmyadmin">EdMyAdmin</a><a href="#edliteadmin">EdLiteAdmin</a>
+	<div class="right"><span id="logo"></span><a href="https://github.com/edmondsql" class="button">View On GitHub</a></div>
+</div>
+</div>
+
+<div class="content">
+<div id="home">
+	<h2>Welcome !</h2><br/>
+	<h3>About</h3>
+	<p>After a long time I decided to make this project public.</p>
+	<p>The first version was only for administration tables, not enough to be a good admin tool.</p>
+	<p>But the two tools have now reached maturity and can manage very well databases.</p>
+	<br/>
+	<p>The purpose of this program is to ease the programmer's work.</p>
+	<p>Both tools are very fast and small, and easy to work with them.</p>
+	<h3>Next releases</h3>
+	<p>EdMyAdmin version 3.0 will be with mysqli and pdo_mysql.<br/>EdLiteAdmin version 3.0 will be with sqlite3 and pdo_sqlite.</p>
+	<h3>Support</h3>
+	<p>Please support my work by making a donation. Thanks a lot!</p>
+	<br/>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick"/>
+<input type="hidden" name="hosted_button_id" value="Q7M9P6D3P743W"/>
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" style="border:0" name="submit" alt="PayPal - The safer, easier way to pay online!"/><img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" style="width:1px;height:1px;border:0"/>
+</form>
+	
+</div>
+<div id="edmyadmin">
+	<h2>EdMyAdmin</h2><br/>
+	<p>EdMyAdmin is a faster full alternative for phpmyadmin.</p>
+	<p>Web based mysql management tool.<br/>Only one file ~80KB.<br/>Small, fast, and contain all necessary operation for manage mysql.</p>
+	<h3>Download:
+	<a href="https://github.com/edmondsql/edmyadmin/archive/master.zip" class="button">ZIP</a>
+	<a href="https://github.com/edmondsql/edmyadmin/archive/master.tar.gz" class="button">TAR</a></h3>
+	<h3>Requirements:</h3><ul>
+	<li>php 4.3.0 to 5.6.x</li>
+	<li>php mysql extension</li>
+	<li>mysql 4.1.x or greater</li>
+	<li>jQuery 1.3 or greater</li>
+	</ul>
+	<h3>Settings:</h3>
+	<p>Settings are optional! (search variable at the top of the file)</p>
+	<ul>
+	<li><b>$step</b> => rows on page (default: 15)</li>
+	<li><b>jQuery</b> => default: from official site</li>
+	</ul>
+	<h3>Features:</h3>
+	<ul>
+	<li>CRUD for database, table, view, trigger, routine, event</li>
+	<li>Copy table in another database</li>
+	<li>Create, edit, update, delete view and trigger</li>
+	<li>Change table name (changing table name in view and in trigger)</li>
+	<li>Change a field from table (changing field name in view and in trigger if exist)</li>
+	<li>Drop the field from table (droping view if contain that field)</li>
+	<li>Delete the table (delete associated views and triggers)</li>
+	<li>Import SQL, CSV</li>
+	<li>Export SQL, CSV with optional pack GZ or ZIP</li>
+	<li>User management</li>
+	<li>Flash messages in the right corner</li>
+	<li>And much more...</li>
+	</ul>
+	<h3>Rules:</h3>
+	<p>CSV Import</p>
+	<ul>
+	<li>CSV file name must be the same as the table name</li>
+	<li>In first row must be defined the table fields name</li>
+	</ul>
+</div>
+<div id="edliteadmin">
+	<h2>EdLiteAdmin</h2><br/>
+	<p>Web based sqlite3 management.<br/>Only one file ~45KB.<br/>Small, fast, and contain all necessary operation for manage sqlite.</p>
+	<h3>Download:
+	<a href="https://github.com/edmondsql/edliteadmin/archive/master.zip" class="button">.ZIP</a>
+	<a href="https://github.com/edmondsql/edliteadmin/archive/master.tar.gz" class="button">.TAR</a></h3>
+	<h3>Requirements:</h3><ul>
+	<li>php 5.3.0 or greater</li>
+	<li>php sqlite3 extension</li>
+	<li>jQuery 1.3 or greater</li>
+	</ul>
+	<h3>Settings:</h3>
+	<p>Settings are optional! (search variable at the top of the file)</p>
+	<ul>
+	<li><b>$ext</b> => sqlite database extension (default: .db3)</li>
+	<li><b>$dir</b> => sqlite database folder (default: current folder)</li>
+	<li><b>$step</b> => rows on page (default: 15)</li>
+	<li><b>jQuery</b> => default: from official site</li>
+	</ul>
+	<h3>Features:</h3>
+	<ul>
+	<li>When creating the database is not required extension</li>
+	<li>CRUD for database, table, view, trigger</li>
+	<li>Copy table in another database</li>
+	<li>Create, edit, update, delete view and trigger</li>
+	<li>Change table name (changing table name in view and in trigger)</li>
+	<li>Change a field from table (changing field name in view and in trigger if exist)</li>
+	<li>Drop the field from table (droping view if contain that field)</li>
+	<li>Delete the table (delete associated views and triggers)</li>
+	<li>Import SQL, CSV</li>
+	<li>Export SQL, CSV with optional pack GZ or ZIP</li>
+	<li>Flash messages in the right corner</li>
+	<li>And much more...</li>
+	</ul>
+	<h3>Rules:</h3>
+	<p>CSV Import</p>
+	<ul>
+	<li>CSV file name must be the same as the table name</li>
+	<li>In first row must be defined the table fields name</li>
+	</ul>
+</div>
+<div class="footer">
+	<p>Project created and maintained by <a href="https://github.com/edmondsql">Edmond L. [edmondsql]</a></p>
+</div>
+</div>
+</body>
+</html>
