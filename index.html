@@ -103,11 +103,10 @@ req.send(null);
 	<li>Flash messages in the right corner</li>
 	<li>Running with mod rewrite<br/>
 	Sample code for Apache:
-<pre>
-RewriteEngine on
-RewriteCond $1 !^(sql\.php|sql\.css|favicon\.ico)
-RewriteRule ^(.*)$ sql.php/$1 [L]
-</pre>
+	<pre>
+	RewriteEngine on
+	RewriteCond $1 !^(sql\.php|sql\.css|favicon\.ico)
+	RewriteRule ^(.*)$ sql.php/$1 [L]</pre>
 	</li>
 	<li>And much more...</li>
 	</ul>
@@ -159,9 +158,9 @@ RewriteRule ^(.*)$ sql.php/$1 [L]
 	<li>Running with mod rewrite<br/>
 	Sample code for Apache:<br/>
 	<pre>
-RewriteEngine on
-RewriteCond $1 !^(lite\.php|lite\.css|favicon\.ico)
-RewriteRule ^(.*)$ lite.php/$1 [L]</pre>
+	RewriteEngine on
+	RewriteCond $1 !^(lite\.php|lite\.css|favicon\.ico)
+	RewriteRule ^(.*)$ lite.php/$1 [L]</pre>
 	</li>
 	<li>And much more...</li>
 	</ul>
