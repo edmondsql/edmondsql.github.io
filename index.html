@@ -57,8 +57,9 @@ req.send(null);
 	<br/>
 	<p>The purpose of this program is to ease the programmer's work.</p>
 	<p>Both tools are very fast, small, and easy to work with.</p>
-	<h3>Future roadmap</h3>
-	<p>EdMyAdmin version 3.0 will be with mysqli and pdo_mysql.<br/>EdLiteAdmin version 3.0 will be with sqlite3 and pdo_sqlite.</p>
+	<h3>News</h3>
+	<p>EdLiteAdmin version 3.0 is available with sqlite3 and pdo_sqlite.<br/>
+	EdMyAdmin version 3.0 will be with mysqli and pdo_mysql.</p>
 	<h3>Support</h3>
 	<p>Please support my work by making a donation. Thanks a lot!</p>
 	<br/>
@@ -97,7 +98,7 @@ req.send(null);
 	<li>Change a field from table (changing field name in view and in trigger if exist)</li>
 	<li>Drop the field from table (droping view if contain that field)</li>
 	<li>Delete the table (delete associated views and triggers)</li>
-	<li>Import SQL, CSV</li>
+	<li>Import SQL, CSV, GZ, ZIP</li>
 	<li>Export SQL, CSV with optional pack GZ or ZIP</li>
 	<li>User management</li>
 	<li>Flash messages in the right corner (It appears for 7 seconds; with double click on message disappear)</li>
@@ -136,12 +137,13 @@ req.send(null);
 	<li>jQuery 1.3 or greater</li>
 	</ul>
 	<h3>Settings:</h3>
-	<p>Settings are optional! (search variable at the top of the file)</p>
+	<p>Settings are optional!</p>
 	<ul>
-	<li><b>$ext</b> => sqlite database extension (default: .db3)</li>
-	<li><b>$dir</b> => sqlite database folder (default: current folder)</li>
-	<li><b>$step</b> => rows on page (default: 15)</li>
-	<li><b>jQuery</b> => default: from official site (download jquery for offline use)</li>
+	<li><b>$ext</b> => sqlite database extension (default: .db3) [ED class variable]</li>
+	<li><b>$passwd</b> => login password (default: empty) [ED class variable]</li>
+	<li><b>$dir</b> => sqlite database folder (default: current folder) [ED class variable]</li>
+	<li><b>$step</b> => rows on page (default: 15) [on top of file]</li>
+	<li><b>jQuery</b> => default: from official site (download jquery for offline use) [in $head variable]</li>
 	</ul>
 	<h3>Features:</h3>
 	<ul>
@@ -153,7 +155,7 @@ req.send(null);
 	<li>Change a field from table (changing field name in view and in trigger if exist)</li>
 	<li>Drop the field from table (droping view if contain that field)</li>
 	<li>Delete the table (delete associated views and triggers)</li>
-	<li>Import SQL, CSV</li>
+	<li>Import SQL, CSV, GZ, ZIP</li>
 	<li>Export SQL, CSV with optional pack GZ or ZIP</li>
 	<li>Flash messages in the right corner (It appears for 7 seconds; with double click on message disappear)</li>
 	<li>Running with mod rewrite<br/>
