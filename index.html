@@ -56,7 +56,7 @@ req.send(null);
 	<p>But the two tools have now reached maturity and can manage very well databases.</p>
 	<br/>
 	<p>The purpose of this program is to ease the programmer's work.</p>
-	<p>Both tools are very fast, small, and easy to work with.</p>
+	<p>Both tools are very fast, small, and easy to use.</p>
 	<h3>News</h3>
 	<p>EdLiteAdmin version 3.x is available with sqlite3 and pdo_sqlite extension.<br/>
 	EdMyAdmin version 3.x is available with mysqli and pdo_mysql extension.</p>
@@ -73,7 +73,7 @@ req.send(null);
 <div id="edmyadmin">
 	<h2>EdMyAdmin</h2><br/>
 	<p>EdMyAdmin is a faster full alternative for phpmyadmin.</p>
-	<p>Web based mysql admin tool.<br/>Only one file ~80KB.<br/>Small, fast, and contain all necessary operation for manage mysql.</p>
+	<p>Web based mysql admin tool.<br/>Only one file ~100KB.<br/>Small, fast, and contain all necessary operation for manage mysql.</p>
 	<h3>Download:
 	<a href="https://github.com/edmondsql/edmyadmin/archive/master.zip" class="button">ZIP</a>
 	<a href="https://github.com/edmondsql/edmyadmin/archive/master.tar.gz" class="button">TAR</a></h3>
@@ -82,14 +82,13 @@ req.send(null);
 	<li>php 5.3.0 or greater</li>
 	<li>php mysqli and/or pdo_mysql extension</li>
 	<li>mysql 5.1.30 or greater</li>
-	<li>jQuery 1.3 or greater</li>
+	<li>jQuery 1.6 or greater</li>
 	</ul>
 	<p>edmyadmin version 2.x work only with mysql extension; php 4.3.0 to 5.6.x; mysql 4.1.x or greater</p>
 	<h3>Settings:</h3>
-	<p>Settings are optional! (search variable at the top of the file)</p>
+	<p>Settings are optional!</p>
 	<ul>
-	<li><b>$step</b> => rows on page (default: 15) [on top of file]</li>
-	<li><b>jQuery</b> => default: from official site (download jquery for offline use) [in $head variable]</li>
+	<li><b>jQuery</b> => default: from googleapis (download jquery for offline use) [in $head variable]</li>
 	</ul>
 	<h3>Features:</h3>
 	<ul>
@@ -123,14 +122,13 @@ req.send(null);
 	<h3>ToDo:</h3>
 	<ul>
 	<li>Upload big file</li>
-	<li>Building advanced edit form for view, trigger, routine, event</li>
 	</ul>
 	<h3>Reporting bugs</h3>
 	<p>Submit a new issue, and leaving as much information about the bug as possible</p>
 </div>
 <div id="edliteadmin">
 	<h2>EdLiteAdmin</h2><br/>
-	<p>Web based sqlite3 admin tool.<br/>Only one file ~50KB.<br/>Small, fast, and contain all necessary operation for manage sqlite.</p>
+	<p>Web based sqlite3 admin tool.<br/>Only one file ~60KB.<br/>Small, fast, and contain all necessary operation for manage sqlite.</p>
 	<h3>Download:
 	<a href="https://github.com/edmondsql/edliteadmin/archive/master.zip" class="button">.ZIP</a>
 	<a href="https://github.com/edmondsql/edliteadmin/archive/master.tar.gz" class="button">.TAR</a></h3>
@@ -142,11 +140,10 @@ req.send(null);
 	<h3>Settings:</h3>
 	<p>Settings are optional!</p>
 	<ul>
+	<li><b>$dir</b> => sqlite database folder (default: current folder) [ED class variable]</li>
 	<li><b>$ext</b> => sqlite database extension (default: .db3) [ED class variable]</li>
 	<li><b>$passwd</b> => login password (default: empty) [ED class variable]</li>
-	<li><b>$dir</b> => sqlite database folder (default: current folder) [ED class variable]</li>
-	<li><b>$step</b> => rows on page (default: 15) [on top of file]</li>
-	<li><b>jQuery</b> => default: from official site (download jquery for offline use) [in $head variable]</li>
+	<li><b>jQuery</b> => default: from googleapis (download jquery for offline use) [in $head variable]</li>
 	</ul>
 	<h3>Features:</h3>
 	<ul>
