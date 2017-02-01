@@ -88,18 +88,19 @@ req.send(null);
 	<h3>Optional Settings:</h3>
 	<ul>
 	<li><b>jQuery</b> => default: current folder; otherwise from googleapis</li>
+	<li><b>$salt</b> => salt for password [ED class variable]</li>
 	</ul>
 	<h3>Features:</h3>
 	<ul>
 	<li>CRUD for database, table, view, trigger, routine, event</li>
 	<li>Copy table in another database</li>
-	<li>Create, edit, update, delete view and trigger</li>
 	<li>Change table name (changing table name in view and in trigger)</li>
 	<li>Change a field from table (changing field name in view and in trigger if exist)</li>
 	<li>Drop the field from table (droping view if contain that field)</li>
-	<li>Delete the table (delete associated views and triggers)</li>
-	<li>Import sql, csv, gz, zip</li>
-	<li>Export sql, csv with optional pack gz or zip</li>
+	<li>Delete the table (delete associated views, triggers)</li>
+	<li>Import sql, csv, json, gz, zip</li>
+	<li>Export sql, csv, json with optional pack gz or zip</li>
+	<li>Export csv and json multi-file in gz or zip</li>
 	<li>User management</li>
 	<li>Flash messages in the right corner (It appears for 7 seconds; with double click on message disappear)</li>
 	<li>Delete with confirm message</li>
@@ -122,8 +123,8 @@ req.send(null);
 	<ul>
 	<li>File name format: [filename].[format].[extension]</li>
 	</ul>
-	<p>filename: only for csv need to be same with the table name<br/>
-	format: sql or csv<br/>
+	<p>filename: for csv and json need to be same with the table name<br/>
+	format: sql, csv, json<br/>
 	extension: gz or zip</p>
 	<h3>Reporting bugs</h3>
 	<p>Submit a new issue, and leaving as much information about the bug as possible</p>
@@ -151,13 +152,13 @@ req.send(null);
 	<li>When creating the database is not required extension</li>
 	<li>CRUD for database, table, view, trigger</li>
 	<li>Copy table in another database</li>
-	<li>Create, edit, update, delete view and trigger</li>
 	<li>Change table name (changing table name in view and in trigger)</li>
 	<li>Change a field from table (changing field name in view and in trigger if exist)</li>
 	<li>Drop the field from table (droping view if contain that field)</li>
 	<li>Delete the table (delete associated views and triggers)</li>
-	<li>Import sql, csv, gz, zip, sqlite/db3</li>
-	<li>Export sql, csv with optional pack gzor zip</li>
+	<li>Import sql, csv, json, gz, zip, sqlite/db3</li>
+	<li>Export sql, csv, json with optional pack gzor zip</li>
+	<li>Export csv and json multi-file in gz or zip</li>
 	<li>Flash messages in the right corner (It appears for 7 seconds; with double click on message disappear)</li>
 	<li>Delete with confirm message</li>
 	<li>Check version in info page</li>
@@ -179,8 +180,8 @@ req.send(null);
 	<ul>
 	<li>File name format: [filename].[format].[extension]</li>
 	</ul>
-	<p>filename: only for csv need to be same with the table name<br/>
-	format: sql, csv, sqlite or default database extension<br/>
+	<p>filename: for csv and json need to be same with the table name<br/>
+	format: sql, csv, json, sqlite or default database extension<br/>
 	extension: gz or zip</p>
 	<h3>Reporting bugs</h3>
 	<p>Submit a new issue, and leaving as much information about the bug as possible</p>
