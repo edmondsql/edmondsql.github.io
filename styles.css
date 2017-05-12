@@ -1,9 +1,9 @@
 * {margin: 0;padding: 0;color:#555}
-html {font-size: 100%;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%}
+body {font-size: 100%}
 h3 {padding-top:21px}
 a {text-decoration:none;color:#842}
 a:hover,a:active {outline: 0;cursor:pointer;cursor:hand}
-img {border: 0;-ms-interpolation-mode: bicubic}
+img {border: 0}
 ul, ol {padding-left:21px}
 b {font-weight:bold}
 body {font: 14px/22px Tahoma,Helvetica;color: #555;font-weight: 300;background: #cdf}
@@ -19,17 +19,14 @@ button,input {line-height: normal}
 button,input[type="button"],input[type="reset"],input[type="submit"] {cursor: pointer;-webkit-appearance: button}
 button[disabled],input[disabled] {cursor: default}
 input[type="checkbox"],input[type="radio"] {box-sizing: border-box}
-button::-moz-focus-inner,input::-moz-focus-inner {border: 0}
 .button:hover {background:#ff5}
-.button {padding:5px;border:1px solid #dc3;background:#ed3;
--moz-border-radius: 4px;-webkit-border-radius: 4px;-o-border-radius: 4px;-ms-border-radius: 4px;-khtml-border-radius: 4px;border-radius: 4px;
-}
+.button {padding:5px;border:1px solid #dc3;background:#ed3;border-radius: 4px}
 
-@media only screen and (max-width: 780px) {
+@media (max-width: 779px) {
 .menu .right {display:none}
 .link, .content {width: 98%}
 }
-@media screen and (min-width: 780px) {
+@media (min-width: 780px) {
 .menu .right {float:right}
 .link, .content {width: 780px}
 }
