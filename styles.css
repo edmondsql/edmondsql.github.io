@@ -1,32 +1,29 @@
-* {margin: 0;padding: 0;color:#555}
-body {font-size: 100%}
+* {margin:0;padding:0;color:#555}
+body {font-size:100%}
 h3 {padding-top:21px}
 a {text-decoration:none;color:#842}
-a:hover,a:active {outline: 0;cursor:pointer;cursor:hand}
-img {border: 0}
+a:hover,a:active {outline:0;cursor:pointer;cursor:hand}
+img {border:0}
 ul, ol {padding-left:21px}
 b {font-weight:bold}
-body {font: 14px/22px Tahoma,Helvetica;color: #555;font-weight: 300;background: #cdf}
-.head {padding:30px 0;width: 100%;text-align: center;background: #9be;font: 18px/42px Tahoma, Helvetica}
+body {font: 14px/22px Tahoma,Helvetica;color:#555;font-weight:300;background:#cdf}
+.head {padding:30px 0;width: 100%;text-align:center;background:#9be;font:18px/42px Tahoma, Helvetica}
 .footer {font-size:11px;border-top:1px solid #555;text-align:center}
 #logo {background: url(octocat.png) no-repeat;height: 36px;width: 36px;float:left;margin-top:-7px;padding:0 5px}
 .link a {padding:5px}
 .menu .link {padding:12px 0;margin:0 auto}
-.menu {width: 100%;background: #fe3}
+.menu {width: 100%;background:#fe3}
+.menu .right {float:right}
+.link, .content {width:780px}
 .content {margin:0 auto;padding:5px 0}
 #home, #edmyadmin, #edliteadmin {display:none;padding:12px}
-button,input {line-height: normal}
-button,input[type="button"],input[type="reset"],input[type="submit"] {cursor: pointer;-webkit-appearance: button}
-button[disabled],input[disabled] {cursor: default}
+button,input {line-height:normal}
+button,input[type="button"],input[type="reset"],input[type="submit"] {cursor:pointer;-webkit-appearance:button}
+button[disabled],input[disabled] {cursor:default}
 input[type="checkbox"],input[type="radio"] {box-sizing: border-box}
 .button:hover {background:#ff5}
-.button {padding:5px;border:1px solid #dc3;background:#ed3;border-radius: 4px}
-
+.button {padding:5px;border:1px solid #dc3;background:#ed3;border-radius:4px}
 @media (max-width: 779px) {
 .menu .right {display:none}
 .link, .content {width: 98%}
-}
-@media (min-width: 780px) {
-.menu .right {float:right}
-.link, .content {width: 780px}
 }
