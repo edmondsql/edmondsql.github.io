@@ -22,16 +22,7 @@ if(el.indexOf(q) == -1) q="home";
 for(var i=0;i<el.length;i++){
 document.getElementById(el[i]).style.display="none";
 }
-req=window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
-req.onreadystatechange = function(){
-if(req.readyState == 4){
-if(req.status == 200){
 document.getElementById(q).style.display="block";
-}
-}
-}
-req.open('get','#'+q);
-req.send(null);
 }
 </script>
 </head>
