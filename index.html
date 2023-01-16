@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="Edmond"/>
 <meta name="description" content="MySQL and SQLite admin manager, small, fast, and easy to use; builded with php"/>
 <meta name="keywords" content="edmyadmin,edliteadmin,edmondsql,phpmyadmin,phpliteadmin,sqlitemanager,mysqlmanager,sqladmin,sqliteadmin,mysql,sqlite,admin,php,sql"/>
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge" /><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 <title>EdmondSQL</title>
-<link rel="stylesheet" href="style.css" type="text/css"/>
-<script type="text/javascript">
+<link rel="stylesheet" href="style.css" />
+<script>
 window.onload=function(){get(hash())}
 window.onhashchange=function(){get(hash())}
 function hash(){
@@ -55,7 +56,7 @@ document.getElementById(q).style.display="block";
 <div id="edmyadmin">
 	<h2>EdMyAdmin</h2><br/>
 	<p>EdMyAdmin is a faster full alternative for phpmyadmin.</p>
-	<p>Web based mysql admin tool.<br/>Only one file ~120KB.<br/>Small, fast, and contain all necessary operation for manage mysql.</p>
+	<p>Web based mysql admin tool.<br/>Only one file ~130KB.<br/>Small, fast, and contain all necessary operation for manage mysql.</p>
 	<h3>Download:
 	<a href="https://github.com/edmondsql/edmyadmin/archive/master.zip" class="button">ZIP</a>
 	<a href="https://github.com/edmondsql/edmyadmin/archive/master.tar.gz" class="button">TAR</a></h3>
@@ -69,7 +70,7 @@ document.getElementById(q).style.display="block";
 	<h3>Optional Settings:</h3>
 	<ul>
 	<li>jQuery or cash.js</li>
-	<li><b>$salt</b> => salt for password [ED class variable]</li>
+	<li><b>$salt</b> => salt for password</li>
 	</ul>
 	<h3>Features:</h3>
 	<ul>
@@ -123,8 +124,8 @@ document.getElementById(q).style.display="block";
 	<h3>Optional Settings:</h3>
 	<ul>
 	<li>jQuery or cash.js</li>
-	<li><b>$ext</b> => sqlite database extension (default: .sqlite) [ED class variable]</li>
-	<li><b>$passwd</b> => login password (default: null) [ED class variable]</li>
+	<li><b>$ext</b> => sqlite database extension (default: .sqlite)</li>
+	<li><b>$passwd</b> => login password (default: null)</li>
 	</ul>
 	<h3>Features:</h3>
 	<ul>
