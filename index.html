@@ -3,8 +3,8 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <meta name="author" content="Edmond"/>
-<meta name="description" content="MySQL and SQLite admin manager, small, fast, and easy to use; builded with php"/>
-<meta name="keywords" content="edmyadmin,edliteadmin,edmondsql,phpmyadmin,phpliteadmin,sqlitemanager,mysqlmanager,sqladmin,sqliteadmin,mysql,sqlite,admin,php,sql"/>
+<meta name="description" content="MySQL, SQLite, Mongodb admin manager, small, fast, and easy to use; builded with php"/>
+<meta name="keywords" content="edmyadmin,edliteadmin,edmongoadmin,edmondsql,phpmyadmin,phpliteadmin,sqlitemanager,mysqlmanager,sqladmin,sqliteadmin,mysql,sqlite,admin,php,sql,mongo"/>
 <title>EdmondSQL</title>
 <link rel="stylesheet" href="style.css" />
 <script>
@@ -16,7 +16,7 @@ if(hash=='') hash="home";
 return hash;
 }
 function get(q){
-var el=["home","edmyadmin","edliteadmin"];
+var el=["home","edmyadmin","edliteadmin","edmongoadmin"];
 if(el.indexOf(q) == -1) q="home";
 for(var i=0;i<el.length;i++){
 document.getElementById(el[i]).style.display="none";
@@ -32,7 +32,7 @@ document.getElementById(q).style.display="block";
 
 <div class="menu">
 <div class="link">
-	<a href="#home">Home</a><a href="#edmyadmin">EdMyAdmin</a><a href="#edliteadmin">EdLiteAdmin</a>
+	<a href="#home">Home</a><a href="#edmyadmin">EdMyAdmin</a><a href="#edliteadmin">EdLiteAdmin</a><a href="#edmongoadmin">EdMongoAdmin</a>
 	<div class="right"><span id="logo"></span><a href="https://github.com/edmondsql" class="button">View On GitHub</a></div>
 </div>
 </div>
@@ -45,10 +45,11 @@ document.getElementById(q).style.display="block";
 	<p>The tools have now reached maturity and can manage very well databases.</p>
 	<br/>
 	<p>The purpose of this program is to make easier the programmer's work.</p>
-	<p>Both tools are very fast, small, and easy to use.</p>
+	<p>All tools are very fast, small, and easy to use.</p>
 	<h3>News</h3>
-	<p>EdLiteAdmin version 3.x is available with sqlite3 and pdo_sqlite extension.<br/>
-	EdMyAdmin version 3.x is available with mysqli and pdo_mysql extension.</p>
+	<p>EdLiteAdmin version 3.x available with sqlite3 and pdo_sqlite extension.<br/>
+	EdMyAdmin version 3.x available with mysqli and pdo_mysql extension.<br/>
+	EdMongoAdmin version 1.x available with mongodb extension.</p>
 </div>
 <div id="edmyadmin">
 	<h2>EdMyAdmin</h2><br/>
@@ -67,7 +68,6 @@ document.getElementById(q).style.display="block";
 	<h3>Optional Settings:</h3>
 	<ul>
 	<li>jQuery or cash.js</li>
-	<li><b>$salt</b> => salt for password</li>
 	</ul>
 	<h3>Features:</h3>
 	<ul>
@@ -78,8 +78,7 @@ document.getElementById(q).style.display="block";
 	<li>Drop the field from table (droping view if contain that field)</li>
 	<li>Delete the table (delete associated views, triggers)</li>
 	<li>Import sql, csv, json, xml, gz, zip</li>
-	<li>Export sql, csv, json, xml with optional pack gz or zip</li>
-	<li>Export csv and json multi-file in gz or zip</li>
+	<li>Export sql, csv, json, xml, spreadsheet and word with optional pack gz or zip</li>
 	<li>User management</li>
 	<li>Flash messages in the right corner (It appears for 7 seconds; with double click on message disappear)</li>
 	<li>Delete with confirm message</li>
@@ -87,15 +86,14 @@ document.getElementById(q).style.display="block";
 	<li>And much more...</li>
 	</ul>
 	<h3>Rules:</h3>
-	<h4>CSV Import</h4>
+	<h4>CSV & JSON Import</h4>
 	<ul>
-	<li>CSV file name must be the same as the table name</li>
-	<li>In first row must be defined the table fields name</li>
+	<li>File name must be the same as the table name</li>
+	<li>CSV first row must be defined the table fields name</li>
 	</ul>
 	<h4>Search</h4>
 	<ul>
-	<li>Between: values are separated by commas</li>
-	<li>For show all must click on "reset search" link</li>
+	<li>For default show must click on "reset search" link</li>
 	</ul>
 	<h4>GZ and Zip Import</h4>
 	<ul>
@@ -105,11 +103,11 @@ document.getElementById(q).style.display="block";
 	format: sql, csv, json<br/>
 	extension: gz or zip</p>
 	<h3>Reporting bugs</h3>
-	<p>Submit a new issue, and leaving as much information about the bug as possible</p>
+	<p>Submit a new issue, and leaving as much information about the bug as possible.</p>
 </div>
 <div id="edliteadmin">
 	<h2>EdLiteAdmin</h2><br/>
-	<p>Web based sqlite3 admin tool.<br/>Only one file ~70KB.<br/>Small, fast, and contain all necessary operation for manage sqlite.</p>
+	<p>Web based sqlite3 admin tool.<br/>Only one file ~80KB.<br/>Small, fast, and contain all necessary operation for manage sqlite.</p>
 	<h3>Download:
 	<a href="https://github.com/edmondsql/edliteadmin/archive/master.zip" class="button">ZIP</a>
 	<a href="https://github.com/edmondsql/edliteadmin/archive/master.tar.gz" class="button">TAR</a></h3>
@@ -132,9 +130,8 @@ document.getElementById(q).style.display="block";
 	<li>Change a field from table (changing field name in view and in trigger if exist)</li>
 	<li>Drop the field from table (droping view if contain that field)</li>
 	<li>Delete the table (delete associated views and triggers)</li>
-	<li>Import sql, csv, json, xml, gz, zip, sqlite/db3</li>
-	<li>Export sql, csv, json, xml, sqlite with optional pack gz or zip</li>
-	<li>Export csv and json multi-file in gz or zip</li>
+	<li>Import sql, csv, json, xml, gz, zip, sqlite/db</li>
+	<li>Export sql, csv, json, xml, sqlite, spreadsheet and word with optional pack gz or zip</li>
 	<li>Flash messages in the right corner (It appears for 7 seconds; with double click on message disappear)</li>
 	<li>Delete with confirm message</li>
 	<li>Running with mod rewrite</li>
@@ -142,14 +139,13 @@ document.getElementById(q).style.display="block";
 	</ul>
 	<h3>Rules:</h3>
 	<ul><li>When creating the database is not required extension</li></ul>
-	<h4>CSV Import</h4>
+	<h4>CSV JSON Import</h4>
 	<ul>
-	<li>CSV file name must be the same as the table name</li>
-	<li>In first row must be defined the table fields name</li>
+	<li>File name must be the same as the table name</li>
+	<li>CSV first row must be defined the table fields name</li>
 	</ul>
 	<h4>Search</h4>
 	<ul>
-	<li>Between: values are separated by commas</li>
 	<li>For show all must click on "reset search" link</li>
 	</ul>
 	<h4>GZ and Zip Import</h4>
@@ -160,7 +156,49 @@ document.getElementById(q).style.display="block";
 	format: sql, csv, json, sqlite or default database extension<br/>
 	extension: gz or zip</p>
 	<h3>Reporting bugs</h3>
-	<p>Submit a new issue, and leaving as much information about the bug as possible</p>
+	<p>Submit a new issue, and leaving as much information about the bug as possible.</p>
+</div>
+<div id="edmongoadmin">
+	<h2>EdMongoAdmin</h2><br/>
+	<p>Web based mongodb admin tool.<br/>Only one file ~40KB.<br/>Small, fast, and contain all necessary operation for manage mongodb.</p>
+	<h3>Download:
+	<a href="https://github.com/edmondsql/edmongoadmin/archive/master.zip" class="button">ZIP</a>
+	<a href="https://github.com/edmondsql/edmongoadmin/archive/master.tar.gz" class="button">TAR</a></h3>
+	<h3>Requirements:</h3><ul>
+	<li>php from 7.0</li>
+	<li>php mongodb extension</li>
+	</ul>
+	<h3>Features:</h3>
+	<ul>
+	<li>CRUD for database, collection, view, indexes</li>
+	<li>Change collection name</li>
+	<li>Import json, xml, gz, zip</li>
+	<li>Export json, xml, with optional pack gz or zip</li>
+	<li>User management</li>
+	<li>Flash messages in the right corner (It appears for 7 seconds; with double click on message disappear)</li>
+	<li>Delete with confirm message</li>
+	<li>Running with mod rewrite</li>
+	<li>And much more...</li>
+	</ul>
+	<h3>Rules:</h3>
+	<h4>CSV Import</h4>
+	<ul>
+	<li>CSV file name must be the same as the table name</li>
+	<li>In first row must be defined the table fields name</li>
+	</ul>
+	<h4>Search</h4>
+	<ul>
+	<li>For show all must click on "reset search" link</li>
+	</ul>
+	<h4>GZ and Zip Import</h4>
+	<ul>
+	<li>File name format: [filename].[format].[extension]</li>
+	</ul>
+	<p>filename: for json need to be same with the collection name<br/>
+	format: json, xml<br/>
+	extension: gz or zip</p>
+	<h3>Reporting bugs</h3>
+	<p>Submit a new issue, and leaving as much information about the bug as possible.</p>
 </div>
 <div class="footer">
 	<p>Project created and maintained by <a href="https://github.com/edmondsql">edmondsql</a></p>
