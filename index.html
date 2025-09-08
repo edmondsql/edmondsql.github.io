@@ -32,7 +32,7 @@ document.getElementById(q).style.display="block";
 
 <div class="menu">
 <div class="link">
-	<a href="#home">Home</a><a href="#edmyadmin">EdMyAdmin</a><a href="#edliteadmin">EdLiteAdmin</a><a href="#edmongoadmin">EdMongoAdmin</a>
+	<a href="#home">Home</a><a href="#edmyadmin">EdMyAdmin</a><a href="#edliteadmin">EdLiteAdmin</a><a href="#edmongoadmin">EdMongoAdmin</a><a href="#edpgadmin">EdPgAdmin</a>
 	<div class="right"><span id="logo"></span><a href="https://github.com/edmondsql" class="button">View On GitHub</a></div>
 </div>
 </div>
@@ -188,6 +188,47 @@ document.getElementById(q).style.display="block";
 	</ul>
 	<p>filename: for json need to be same with the collection name<br/>
 	format: json, xml<br/>
+	extension: gz or zip</p>
+	<h3>Reporting bugs</h3>
+	<p>Submit a new issue, and leaving as much information about the bug as possible.</p>
+</div>
+<div id="edpgadmin">
+	<h2>EdPgAdmin</h2><br/>
+	<p>Web based postgresql admin tool.<br/>Only one file ~90KB.<br/>Small, fast, and contain all necessary operation for manage postgresql.</p>
+	<h3>Download:
+	<a href="https://github.com/edmondsql/edpgadmin/archive/master.zip" class="button">ZIP</a>
+	<a href="https://github.com/edmondsql/edpgadmin/archive/master.tar.gz" class="button">TAR</a></h3>
+	<h3>Requirements:</h3><ul>
+	<li>php from 7.0</li>
+	<li>php pdo postgresql extension</li>
+	</ul>
+	<h3>Features:</h3>
+	<ul>
+	<li>CRUD for database, tables, views, indexes</li>
+	<li>Change table name</li>
+	<li>Import sql, csv, json, xml, gz, zip</li>
+	<li>Export sql, csv, json, xml, spreadsheet and word with optional pack gz or zip</li>
+	<li>User management</li>
+	<li>Flash messages in the right corner (It appears for 7 seconds; with double click on message disappear)</li>
+	<li>Delete with confirm message</li>
+	<li>Running with mod rewrite</li>
+	<li>And much more...</li>
+	</ul>
+	<h3>Rules:</h3>
+	<h4>JSON Import</h4>
+	<ul>
+	<li>JSON file name must be the same as the table name</li>
+	</ul>
+	<h4>Search</h4>
+	<ul>
+	<li>For show all must click on "reset search" link</li>
+	</ul>
+	<h4>GZ and Zip Import</h4>
+	<ul>
+	<li>File name format: [filename].[format].[extension]</li>
+	</ul>
+	<p>filename: for json need to be same with the collection name<br/>
+	format: sql, csv, json, xml<br/>
 	extension: gz or zip</p>
 	<h3>Reporting bugs</h3>
 	<p>Submit a new issue, and leaving as much information about the bug as possible.</p>
