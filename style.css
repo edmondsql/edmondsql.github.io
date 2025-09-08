@@ -16,7 +16,7 @@ body {font: 14px/22px Tahoma,Helvetica;color:#555;font-weight:300;background:#cd
 .menu .right {float:right}
 .link, .content {width:780px}
 .content {margin:0 auto;padding:5px 0}
-#home, #edmyadmin, #edliteadmin, #edmongoadmin {display:none;padding:12px}
+#home, #edmyadmin, #edliteadmin, #edmongoadmin, #edpgadmin {display:none;padding:12px}
 button,input {line-height:normal}
 button,input[type="button"],input[type="reset"],input[type="submit"] {cursor:pointer;-webkit-appearance:button}
 button[disabled],input[disabled] {cursor:default}
